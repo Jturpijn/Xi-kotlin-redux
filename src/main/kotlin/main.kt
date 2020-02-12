@@ -2,7 +2,6 @@
 import actions.clickIncrement
 import actions.countIncrement
 import kotlinredux.createStore
-import reducers.countReducer
 import reducers.rootReducer
 
 data class State(
