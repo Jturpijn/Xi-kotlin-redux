@@ -1,6 +1,6 @@
 plugins {
     kotlin("js") version "1.3.61"
-    kotlin("plugin.serialization") version "1.3.61"
+    kotlin("plugin.serialization") version "1.3.61" apply true
 }
 
 group = "org.example"
@@ -21,6 +21,7 @@ dependencies {
 kotlin {
     target {
         nodejs()
+        useCommonJs()
     }
     sourceSets {
         main {
@@ -29,7 +30,4 @@ kotlin {
             }
         }
     }
-}
-apply {
-    plugin("kotlinx-serialization")
 }

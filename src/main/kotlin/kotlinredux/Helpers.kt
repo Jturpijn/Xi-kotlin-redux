@@ -1,6 +1,13 @@
 package kotlinredux
 
-fun <S, A> combineReducers(reducers: Map<String, Reducer<*, A>>): Reducer<S, A> = combineReducers(
-    reducers.forEach { js("this[it.key] = it.value;") }.unsafeCast<ReducerContainer<S, A>>())
+import State
+
+fun <S, A> combineReducers(reducers: Map<String, Reducer<*, A>>): Reducer<S, A> {
+    val obj: dynamic = object{}
+    reducers.forEach { obj[it.key] = it.value}
+    return combineReducers(
+        obj.unsafeCast<ReducerContainer<S, A>>()
+    )
+}
 
 interface RAction

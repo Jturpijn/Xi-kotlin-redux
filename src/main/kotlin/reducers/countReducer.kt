@@ -3,9 +3,9 @@ package reducers
 import State
 import kotlinredux.Action
 
-fun countReducer(state: State = State(), action: Action) =
+fun countReducer(state: Int = State().counter, action: Action) =
     when(action.type) {
-        "COUNTINCREMENT" -> State(state.counter +1)
-        "COUNTDECREMENT" -> State(state.counter -1)
+        "COUNTINCREMENT" -> state +1
+        "COUNTDECREMENT" -> state -1
         else -> state
     }
