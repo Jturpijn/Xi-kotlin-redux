@@ -9,5 +9,4 @@ By using different sources, I'm trying to create a payment system which uses red
 * https://github.com/AltmanEA/KotlinExamples
 
 ## Build
-In order to build this project, I recommend using IntelliJ. 
-Clone the project, open with Intellij and use the gradle tab on the right to run the ```build``` - task.
+Clone the project, navigate to ```xi_kotlin\build\js\packages\xi_kotlin_redux```. This is where the transpiled js script is located. Use the ```node ./kotlin\xi_kotlin_redux.js``` command to run the script.
