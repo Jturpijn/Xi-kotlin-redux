@@ -15,6 +15,7 @@ repositories {
 dependencies {
     implementation(kotlin("stdlib-js"))
     testImplementation(kotlin("stdlib-js"))
+    implementation(kotlin("test-js"))
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime-js:0.14.0")
 }
 
@@ -27,6 +28,7 @@ kotlin {
         main {
             dependencies {
                 implementation(npm("redux", "4.0.5"))
+                implementation(npm("redux-logger", "3.0.6"))
             }
         }
     }
