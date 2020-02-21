@@ -29,6 +29,7 @@ kotlin {
             dependencies {
                 implementation(npm("redux", "4.0.5"))
                 implementation(npm("redux-logger", "3.0.6"))
+                implementation(npm("redux-saga", "1.1.3"))
             }
         }
     }

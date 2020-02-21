@@ -7,7 +7,7 @@ external interface Action {
 external interface Store<S, A, R> {
     fun getState(): S
 
-    fun dispatch(action: Action): Action
+    fun dispatch(action: Action): A
 
     fun subscribe(listener: () -> Unit): () -> Unit
 
